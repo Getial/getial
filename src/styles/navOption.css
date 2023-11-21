@@ -1,0 +1,14 @@
+.navOption {
+  display: flex;
+  width: 10rem;
+  height: 1rem;
+  padding: 1rem 0.1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+.isActive {
+  background-color: var(--background1);
+}
