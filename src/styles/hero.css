@@ -10,19 +10,39 @@
 
 .hero h1 {
   font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero .subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
   margin-bottom: 3rem;
 }
 
-.hero p {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 6rem;
+.hero .subtitle.active {
+  display: none;
 }
 
-.hero span {
+.subtitle span {
   color: var(--primary);
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+.hero .description {
+  font-size: 1.2rem;
+  font-weight: 200;
+  display: none;
+}
+
+.description span {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.hero .active {
+  display: initial;
 }
 
 .hero button {
@@ -37,6 +57,7 @@
   border-radius: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
+  margin-top: 2rem;
 }
 
 /* Media query para tabletas */
@@ -45,15 +66,20 @@
     font-size: 2.5rem;
   }
 
-  .hero p {
+  .hero .subtitle {
     font-size: 2rem;
     font-weight: 500;
   }
 
-  .hero span {
+  .subtitle span {
     color: var(--primary);
     font-size: 2rem;
     font-weight: 600;
+  }
+
+  .hero .description,
+  .description span {
+    font-size: 1.5rem;
   }
 
   .hero button {
@@ -68,15 +94,20 @@
     font-size: 3rem;
   }
 
-  .hero p {
+  .hero .subtitle {
     font-size: 2.5rem;
     font-weight: 500;
   }
 
-  .hero span {
+  .subtitle span {
     color: var(--primary);
     font-size: 2.5rem;
     font-weight: 600;
+  }
+
+  .hero .description,
+  .description span {
+    font-size: 1.8rem;
   }
 
   .hero button {

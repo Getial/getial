@@ -16,7 +16,7 @@
 
 - 💻 &nbsp; HTML | CSS | JavaScript | ReactJS | ReactNative
 
-- 🌐 &nbsp; Node | MongoDB | Postgres |
+- 🌐 &nbsp; Python | Node | MongoDB | Postgres |
 
 <br/>
 

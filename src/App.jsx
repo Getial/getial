@@ -3,6 +3,7 @@ import "./styles/App.css";
 import MenuDesktop from "./components/MenuDesktop";
 import MenuMobile from "./components/MenuMobile";
 import Hero from "./components/Hero";
+import Projects from "./components/Projects";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,9 +13,7 @@ function App() {
       <MenuDesktop />
       <MenuMobile />
       <Hero />
-      <Hero />
-      <Hero />
-      <Hero />
+      <Projects />
     </>
   );
 }

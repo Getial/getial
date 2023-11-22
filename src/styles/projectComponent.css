@@ -1,0 +1,17 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bgProject);
+  margin-bottom: 0.5rem;
+}
+
+.btnsDesktop {
+  display: none;
+}
+
+.project img {
+  width: 100px;
+  height: 100px;
+}
+/* .btnsMobile {
+} */
