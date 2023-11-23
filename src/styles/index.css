@@ -8,11 +8,11 @@
   background-color: #080808;
 
   --black: #080808;
+  --blackpuro: #000;
   --background1: #120045;
   --bgProject: #004368;
   --fondoOscuro: #0c002e;
   --primary: #00ffed;
-  --blackpuro: #000;
   --acentoazul: #091c62;
 }
 
@@ -25,7 +25,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1300px;
+  /* max-width: 1300px; */
   margin: 0 auto;
-  /* background-color: salmon; */
 }
