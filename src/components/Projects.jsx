@@ -1,35 +1,19 @@
 import React from "react";
 import ProjectComponent from "./ProjectComponent";
 import "../styles/projects.css";
+import { projects } from "../utils/projects";
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "Admos",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, eius cum impedit autem aliquid recusandae sequi mollitia sunt aspernatur soluta! Voluptatem adipisci aspernatur possimus deserunt voluptates cum fuga cupiditate praesentium.",
-      image: "src/assets/1.jpeg",
-    },
-    {
-      title: "React Shop",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, eius cum impedit autem aliquid recusandae sequi mollitia sunt aspernatur soluta! Voluptatem adipisci aspernatur possimus deserunt voluptates cum fuga cupiditate praesentium.",
-      image: "src/assets/2.jpeg",
-    },
-    {
-      title: "Music Player",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, eius cum impedit autem aliquid recusandae sequi mollitia sunt aspernatur soluta! Voluptatem adipisci aspernatur possimus deserunt voluptates cum fuga cupiditate praesentium.",
-      image: "src/assets/1.jpeg",
-    },
-  ];
   return (
     <section className="projects">
-      {projects.map((project) => (
+      <h3 className="title">Proyectos</h3>
+      {projects.map((project, index) => (
         <ProjectComponent
           title={project.title}
+          type={project.type}
           description={project.description}
           imageUrl={project.image}
+          left={index % 2 ? true : false}
         />
       ))}
     </section>

@@ -15,6 +15,7 @@
 .projectDescription {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   padding: 0 1rem;
 }
 
@@ -31,6 +32,7 @@
 
 .btnsDesktop {
   display: none;
+  margin-top: 1rem;
 }
 
 .btnsMobile {
@@ -110,22 +112,40 @@
 
   .projectTitle {
     font-size: 2.5rem;
+    margin-bottom: 4rem;
+    background-color: var(--bgTitleProject);
+    width: 100%;
+    text-align: center;
+    padding: 0.2rem 0;
+  }
+
+  .left {
+    flex-direction: row-reverse;
+  }
+
+  .projectDescription > div {
+    width: 45%;
   }
 
   .projectDescription p {
     font-size: 1.5rem;
   }
 
+  .project .btnsDesktop {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
   .project img {
-    width: 200px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     margin-left: 1rem;
   }
 }
 
 @media (min-width: 1200px) {
   .project {
-    padding: 6rem 4rem;
+    padding: 4rem 4rem;
     margin: 0;
     border: 0;
     width: 80%;
@@ -140,9 +160,13 @@
     font-size: 1.8rem;
   }
 
+  .project .btnsDesktop {
+    width: 70%;
+  }
+
   .project img {
-    width: 170px;
-    height: 150px;
+    width: 400px;
+    height: 400px;
     margin-left: 1rem;
   }
 }

@@ -1,11 +1,21 @@
 import React from "react";
 import "../styles/projectComponent.css";
 
-export default function ProjectComponent({ title, description, imageUrl }) {
+export default function ProjectComponent({
+  title,
+  type,
+  description,
+  imageUrl,
+  left,
+}) {
+  const isLeft = left ? "left" : "";
+
   return (
     <div className="project">
-      <h4 className="projectTitle">{title}</h4>
-      <div className="projectDescription">
+      <h4 className="projectTitle">
+        {title} <span>({type})</span>
+      </h4>
+      <div className={`projectDescription ${isLeft}`}>
         <div>
           <p>{description}</p>
           <div className="btns btnsDesktop">

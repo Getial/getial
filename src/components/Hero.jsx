@@ -5,6 +5,8 @@ export default function Hero() {
   const [showDescription, setShowDescription] = useState(false);
 
   const isShowDescription = showDescription ? "active" : "";
+
+  const textBtn = isShowDescription ? "Resumen" : "Mas sobre mi";
   return (
     <section className="hero">
       <h1>Hola, soy Felipe Getial</h1>
@@ -27,7 +29,7 @@ export default function Hero() {
         de código en resultados visuales impactantes.
       </p>
       <button onClick={() => setShowDescription(!showDescription)}>
-        Más sobre mi
+        {textBtn}
       </button>
     </section>
   );

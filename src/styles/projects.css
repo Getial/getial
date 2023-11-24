@@ -4,6 +4,24 @@
   width: 100%;
 }
 
+.projects .title {
+  background-color: var(--bgProject);
+  height: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  padding-left: 15%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media (min-width: 800px) {
+  .projects .title {
+    display: none;
+  }
+}
+
 @media (min-width: 950px) {
   .projects {
     display: flex;
