@@ -8,13 +8,7 @@ export default function Projects() {
     <section className="projects">
       <h3 className="title">Proyectos</h3>
       {projects.map((project, index) => (
-        <ProjectComponent
-          title={project.title}
-          type={project.type}
-          description={project.description}
-          imageUrl={project.image}
-          left={index % 2 ? true : false}
-        />
+        <ProjectComponent project={project} left={index % 2 ? true : false} />
       ))}
     </section>
   );

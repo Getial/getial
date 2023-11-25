@@ -4,6 +4,7 @@ import MenuDesktop from "./components/MenuDesktop";
 import MenuMobile from "./components/MenuMobile";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
+import Habilitys from "./components/Habilitys";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
       <MenuMobile />
       <Hero />
       <Projects />
+      <Habilitys />
     </>
   );
 }

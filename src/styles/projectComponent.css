@@ -52,6 +52,11 @@
   margin: 1rem 0;
 }
 
+.project .btns a {
+  text-decoration: none;
+  color: var(--blackpuro);
+}
+
 .project .btns button {
   background-color: var(--primary);
   display: flex;

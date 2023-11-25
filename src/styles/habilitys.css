@@ -1,0 +1,21 @@
+.card-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-carousel button {
+  font-size: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}

@@ -1,13 +1,9 @@
 import React from "react";
 import "../styles/projectComponent.css";
 
-export default function ProjectComponent({
-  title,
-  type,
-  description,
-  imageUrl,
-  left,
-}) {
+export default function ProjectComponent({ project }) {
+  const { title, type, description, image, left, codeUrl } = project;
+
   const isLeft = left ? "left" : "";
 
   return (
@@ -19,15 +15,23 @@ export default function ProjectComponent({
         <div>
           <p>{description}</p>
           <div className="btns btnsDesktop">
+            <button>
+              <a href={codeUrl} target="_blank">
+                Ver Codigo
+              </a>
+            </button>
             <button>Ver Proyecto</button>
-            <button>Ver Codigo</button>
           </div>
         </div>
-        <img src={imageUrl} />
+        <img src={image} />
       </div>
       <div className="btns btnsMobile">
+        <button>
+          <a href={codeUrl} target="_blank">
+            Ver Codigo
+          </a>
+        </button>
         <button>Ver Proyecto</button>
-        <button>Ver Codigo</button>
       </div>
     </div>
   );
