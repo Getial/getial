@@ -1,32 +1,13 @@
 import React, { useState } from "react";
 import "../styles/habilitys.css";
 import { habilitys } from "../utils/habilitys";
+import CardCarrousel from "./CardCarrousel";
 
 export default function Habilitys() {
-  const [currentCard, setCurrentCard] = useState(0);
-
-  const nextCard = () => {
-    setCurrentCard((prevCard) => (prevCard + 1) % habilitys.length);
-  };
-
-  const prevCard = () => {
-    setCurrentCard(
-      (prevCard) => (prevCard - 1 + habilitys.length) % habilitys.length
-    );
-  };
-
   return (
-    <div className="card-carousel">
-      <button onClick={prevCard}>&lt;</button>
-      <div className="card">
-        <img
-          src={habilitys[currentCard].image}
-          alt={habilitys[currentCard].title}
-        />
-        <h2>{habilitys[currentCard].title}</h2>
-        <p>{habilitys[currentCard].description}</p>
-      </div>
-      <button onClick={nextCard}>&gt;</button>
-    </div>
+    <section className="habilitys">
+      <h3 className="title">Habilidades y Conocimientos</h3>
+      <CardCarrousel />
+    </section>
   );
 }

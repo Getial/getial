@@ -1,21 +1,27 @@
-.card-carousel {
+.habilitys {
+  background-color: var(--background1);
+  height: 99vh;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80%;
-  margin: auto;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.card {
-  border: 1px solid #ddd;
-  padding: 20px;
+.habilitys .title {
+  width: 100%;
+  background-color: var(--background1);
+  height: 2rem;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   text-align: center;
+  border-bottom: 7px solid var(--black);
 }
 
-.card-carousel button {
-  font-size: 20px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  outline: none;
+@media (min-width: 800px) {
+  .habilitys .title {
+    display: none;
+  }
 }
