@@ -7,6 +7,8 @@ export default function Hero() {
   const isShowDescription = showDescription ? "active" : "";
 
   const textBtn = isShowDescription ? "Resumen" : "Mas sobre mi";
+
+  console.log(window.innerWidth);
   return (
     <section className="hero">
       <h1>Hola, soy Felipe Getial</h1>
@@ -31,6 +33,7 @@ export default function Hero() {
       <button onClick={() => setShowDescription(!showDescription)}>
         {textBtn}
       </button>
+      <p>{window.innerWidth}</p>
     </section>
   );
 }

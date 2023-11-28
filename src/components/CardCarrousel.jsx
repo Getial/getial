@@ -17,16 +17,23 @@ export default function CardCarrousel() {
 
   return (
     <div className="card-carousel">
-      <button onClick={prevCard}>&lt;</button>
-      <div className="card">
-        <img
-          src={habilitys[currentCard].image}
-          alt={habilitys[currentCard].title}
-        />
-        <h2>{habilitys[currentCard].title}</h2>
-        <p>{habilitys[currentCard].description}</p>
-      </div>
-      <button onClick={nextCard}>&gt;</button>
+      {/* <button onClick={prevCard}>&lt;</button> */}
+      {habilitys.map((item, index) => (
+        <div key={index} className="card">
+          <img src={item.image} alt={item.title} />
+          <h2>{item.title}</h2>
+          <p>{item.description}</p>
+        </div>
+      ))}
+      {/* <div className="card">
+          <img
+            src={habilitys[currentCard].image}
+            alt={habilitys[currentCard].title}
+          />
+          <h2>{habilitys[currentCard].title}</h2>
+          <p>{habilitys[currentCard].description}</p>
+        </div> */}
+      {/* <button onClick={nextCard}>&gt;</button> */}
     </div>
   );
 }

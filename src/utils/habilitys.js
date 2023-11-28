@@ -33,7 +33,7 @@ export const habilitys = [
     title: "HTML",
     image: "./assets/logos/html.png",
     description:
-      "HTML, siglas en inglés de HyperText Markup Language, hace referencia al lenguaje de marcado para la elaboración de páginas web.",
+      "Siglas en inglés de HyperText Markup Language, hace referencia al lenguaje de marcado para la elaboración de páginas web.",
   },
   {
     title: "CSS",

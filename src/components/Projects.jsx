@@ -8,7 +8,11 @@ export default function Projects() {
     <section className="projects">
       <h3 className="title">Proyectos</h3>
       {projects.map((project, index) => (
-        <ProjectComponent project={project} left={index % 2 ? true : false} />
+        <ProjectComponent
+          key={index}
+          project={project}
+          left={index % 2 ? true : false}
+        />
       ))}
     </section>
   );

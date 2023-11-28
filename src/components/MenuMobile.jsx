@@ -21,8 +21,12 @@ export default function MenuMobile() {
         <ul>
           {options
             // .filter((item) => item.isActive === false)
-            .map((item) => (
-              <NavOptionMobile title={item.title} isActive={false} />
+            .map((item, index) => (
+              <NavOptionMobile
+                key={index}
+                title={item.title}
+                isActive={false}
+              />
             ))}
         </ul>
       </div>

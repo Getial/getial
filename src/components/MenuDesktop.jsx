@@ -13,6 +13,7 @@ export default function MenuDesktop() {
     <header className="menuDesktop">
       {opt.map((item, index) => (
         <NavOption
+          key={index}
           title={item.title}
           isActive={item.isActive}
           setOption={() => selectOption(index)}
