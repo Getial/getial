@@ -21,10 +21,12 @@ export default function CardCarrousel() {
       {habilitys.map((item, index) => (
         <div key={index} className="card">
           <img src={item.image} alt={item.title} />
-          <h2>{item.title}</h2>
-          <p>{item.description}</p>
+          <h2 className="titleCard">{item.title}</h2>
+          <p className="textCard">{item.description}</p>
         </div>
       ))}
+
+      {/* <p className="dotsContainer">Hola mundo</p> */}
       {/* <div className="card">
           <img
             src={habilitys[currentCard].image}

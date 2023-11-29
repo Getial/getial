@@ -15,13 +15,13 @@ export const habilitys = [
     title: "React Native",
     image: "./assets/logos/react.png",
     description:
-      "Es un framework de código abierto creado por Meta Platforms, Inc. Se utiliza para desarrollar aplicaciones multiplataform al permitir que los desarrolladores usen React con las características nativas de estas plataformas.​",
+      "Es un framework de código abierto. Se utiliza para desarrollar aplicaciones multiplataform al permitir que los desarrolladores usen React con las características nativas de estas plataformas.​",
   },
   {
     title: "Python",
     image: "./assets/logos/python.png",
     description:
-      "Es un lenguaje de alto nivel de programación interpretado cuya filosofía hace hincapié en la legibilidad de su código, se utiliza para desarrollar aplicaciones de todo tipo, por ejemplo: Instagram, Netflix, Spotify, Panda3D, entre otros.​",
+      "Es un lenguaje de alto nivel de programación interpretado cuya filosofía hace hincapié en la legibilidad de su código, se utiliza para desarrollar aplicaciones de todo tipo​",
   },
   {
     title: "Django",
