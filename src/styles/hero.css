@@ -13,7 +13,8 @@
 .bgimage {
   position: absolute;
   background-image: url("./background.png");
-  /* background-color: aqua; */
+  background-size: 50px 50px;
+  /* background-color: red; */
   width: 100vw;
   height: 100vh;
   z-index: -1;
@@ -21,12 +22,11 @@
 }
 
 .hero .bgazul {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background-color: var(--primary);
   position: absolute;
-  /* top: 100px;
-  left: 100px; */
+  border-radius: 50%;
   transition: left 1s, top 1s;
   z-index: -2;
 }
@@ -35,14 +35,14 @@
   font-size: 2rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
-  background-color: var(--blackpuro);
+  background-color: var(--blackpuro50);
 }
 
 .hero .subtitle {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 3rem;
-  background-color: var(--blackpuro);
+  background-color: var(--blackpuro50);
   width: 95%;
 }
 
@@ -88,18 +88,15 @@
 
 /* Media query para tabletas */
 @media (min-width: 600px) {
+  .bgimage {
+    background-size: 75px 75px;
+  }
+  .hero .bgazul {
+    width: 90px;
+    height: 90px;
+    transition: left 1.5s, top 1.5s;
+  }
   .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero .subtitle {
-    font-size: 2rem;
-    font-weight: 500;
-    width: 80%;
-  }
-
-  .subtitle span {
-    color: var(--primary);
     font-size: 2rem;
     font-weight: 600;
   }
@@ -119,6 +116,14 @@
 @media (min-width: 800px) {
   .hero {
     width: 99%;
+  }
+  .bgimage {
+    background-size: 100px 100px;
+  }
+  .hero .bgazul {
+    width: 100px;
+    height: 100px;
+    transition: left 2s, top 2s;
   }
   .hero h1 {
     font-size: 3rem;

@@ -4,9 +4,28 @@ import NavOptionMobile from "./NavOptionMobile";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import "../styles/header.css";
 import { options } from "../utils/menuOptions";
+import { scroller } from "react-scroll";
 
 export default function MenuMobile() {
   const [isShowOptions, setIsShowOptions] = useState(false);
+  const [opts, setOpts] = useState(options);
+  const [title, setTitle] = useState("Home");
+  const scrollType = {
+    duration: 500,
+    delay: 50,
+    smooth: true, // linear “easeInQuint” “easeOutCubic”
+    offset: -10,
+  };
+
+  const selectOption = (index) => {
+    const name = opts[index].title;
+    setTitle(name);
+    const newOpts = opts.map((item) => ({ ...item, isActive: false }));
+    newOpts[index].isActive = true;
+    setOpts(newOpts);
+    scroller.scrollTo(name, scrollType);
+  };
+
   const toggleOptions = () => {
     setIsShowOptions(!isShowOptions);
   };
@@ -15,7 +34,7 @@ export default function MenuMobile() {
 
   return (
     <header className="menuMobile">
-      <NavOption title="Home" isActive={true} />
+      <NavOption title={title} isActive={true} />
       <MenuOutlinedIcon onClick={toggleOptions} />
       <div className={`listContainer ${showOptions}`}>
         <ul>
@@ -24,8 +43,10 @@ export default function MenuMobile() {
             .map((item, index) => (
               <NavOptionMobile
                 key={index}
+                pos={index}
                 title={item.title}
                 isActive={false}
+                setOption={selectOption}
               />
             ))}
         </ul>

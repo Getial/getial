@@ -1,12 +1,15 @@
 import React from "react";
 import "../styles/navOptionMobile.css";
 
-export default function NavOptionMobile({ title, isActive, setOption }) {
+export default function NavOptionMobile({ title, isActive, setOption, pos }) {
   const navOption = "navOptionMobile";
   const bgActive = isActive ? "isActive" : "";
   return (
-    <div onClick={() => setOption} className={`${navOption} ${bgActive}`}>
+    <button
+      onClick={() => setOption(pos)}
+      className={`${navOption} ${bgActive}`}
+    >
       {title}
-    </div>
+    </button>
   );
 }
