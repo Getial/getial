@@ -7,20 +7,30 @@ import { Element } from "react-scroll";
 export default function Projects({ onInView }) {
   const projectsRef = useRef(null);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     // Acciones cuando el componente está en pantalla
-  //     const rect = projectsRef.current.getBoundingClientRect();
-  //     const isInView = rect.top < window.innerHeight && rect.bottom >= 0;
-  //     onInView(isInView);
-  //   };
+  useEffect(() => {
+    const handleScroll = () => {
+      // Acciones cuando el componente está en pantalla
+      const rect =
+        projectsRef.current.childBindings.domNode.getBoundingClientRect();
+      // console.log(
+      //   "rect.top projects ===>> ",
+      //   rect.top < 300 && rect.bottom >= 300
+      // );
+      // console.log(rect.bottom);
 
-  //   window.addEventListener("scroll", handleScroll);
+      // console.log("bottom", rect.bottom);
+      // console.log("top", rect.top);
 
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
+      const isInView = rect.top < 300 && rect.bottom >= 300;
+      onInView(isInView);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <Element
       name="Proyectos"

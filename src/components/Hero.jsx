@@ -27,23 +27,28 @@ export default function Hero({ onInView }) {
   }, []);
 
   // useEffect para leer el scroll
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     // Acciones cuando el componente está en pantalla
-  //     if (heroRef.current) {
-  //       //por corregir
-  //       // const rect = heroRef.current.getBoundingClientRect();
-  //       // const isInView = rect.top < window.innerHeight && rect.bottom >= 0;
-  //       // onInView(isInView);
-  //     }
-  //   };
+  useEffect(() => {
+    const handleScroll = () => {
+      // Acciones cuando el componente está en pantalla
+      if (heroRef.current) {
+        const rect =
+          heroRef.current.childBindings.domNode.getBoundingClientRect();
+        // console.log(
+        //   "rect.top Hero ===>> ",
+        //   rect.top < 300 && rect.bottom >= 300
+        // );
+        // console.log(rect.bottom);
+        const isInView = rect.top < 300 && rect.bottom >= 300;
+        onInView(isInView);
+      }
+    };
 
-  //   window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <Element name="Home" className="hero" ref={heroRef}>
