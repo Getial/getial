@@ -84,6 +84,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   margin-top: 2rem;
+  color: var(--white);
 }
 
 /* Media query para tabletas */
