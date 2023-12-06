@@ -11,12 +11,6 @@ export default function Habilitys({ onInView }) {
       // Acciones cuando el componente está en pantalla
       const rect =
         habilitysRef.current.childBindings.domNode.getBoundingClientRect();
-      // console.log(
-      //   "rect.top habilitys ===>> ",
-      //   rect.top < 300 && rect.bottom >= 300
-      // );
-      // console.log(rect.bottom);
-      // console.log("innerheight====>", window.innerHeight);
       const isInView = rect.top < 300 && rect.bottom >= 300;
       onInView(isInView);
     };

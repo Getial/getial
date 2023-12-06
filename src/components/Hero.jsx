@@ -33,11 +33,6 @@ export default function Hero({ onInView }) {
       if (heroRef.current) {
         const rect =
           heroRef.current.childBindings.domNode.getBoundingClientRect();
-        // console.log(
-        //   "rect.top Hero ===>> ",
-        //   rect.top < 300 && rect.bottom >= 300
-        // );
-        // console.log(rect.bottom);
         const isInView = rect.top < 300 && rect.bottom >= 300;
         onInView(isInView);
       }

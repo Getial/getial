@@ -12,15 +12,6 @@ export default function Projects({ onInView }) {
       // Acciones cuando el componente está en pantalla
       const rect =
         projectsRef.current.childBindings.domNode.getBoundingClientRect();
-      // console.log(
-      //   "rect.top projects ===>> ",
-      //   rect.top < 300 && rect.bottom >= 300
-      // );
-      // console.log(rect.bottom);
-
-      // console.log("bottom", rect.bottom);
-      // console.log("top", rect.top);
-
       const isInView = rect.top < 300 && rect.bottom >= 300;
       onInView(isInView);
     };

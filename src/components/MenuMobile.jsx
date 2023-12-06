@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavOption from "./NavOption";
 import NavOptionMobile from "./NavOptionMobile";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
@@ -6,7 +6,7 @@ import "../styles/header.css";
 import { options } from "../utils/menuOptions";
 import { scroller } from "react-scroll";
 
-export default function MenuMobile() {
+export default function MenuMobile({ componentActive }) {
   const [isShowOptions, setIsShowOptions] = useState(false);
   const [opts, setOpts] = useState(options);
   const [title, setTitle] = useState("Home");
@@ -31,6 +31,12 @@ export default function MenuMobile() {
   };
 
   const showOptions = isShowOptions ? "active" : "";
+
+  useEffect(() => {
+    if (title) {
+      setTitle(componentActive);
+    }
+  }, [componentActive]);
 
   return (
     <header className="menuMobile">

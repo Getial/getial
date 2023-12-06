@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { options } from "../utils/menuOptions";
 import NavOption from "./NavOption";
 import "../styles/header.css";
 import { scroller } from "react-scroll";
 
-export default function MenuDesktop() {
+export default function MenuDesktop({ componentActive }) {
   const [opts, setOpts] = useState(options);
   const scrollType = {
     duration: 500,
@@ -20,6 +20,19 @@ export default function MenuDesktop() {
     setOpts(newOpts);
     scroller.scrollTo(name, scrollType);
   };
+
+  const setTitleOption = (index) => {
+    const newOpts = opts.map((item) => ({ ...item, isActive: false }));
+    newOpts[index].isActive = true;
+    setOpts(newOpts);
+  };
+
+  useEffect(() => {
+    if (opts) {
+      let indice = opts.findIndex((objeto) => objeto.title === componentActive);
+      setTitleOption(indice);
+    }
+  }, [componentActive]);
 
   return (
     <header className="menuDesktop">
