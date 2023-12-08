@@ -5,6 +5,7 @@ import MenuMobile from "./components/MenuMobile";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Habilitys from "./components/Habilitys";
+import Contact from "./components/Contact";
 
 function App() {
   const [componentActive, setComponentActive] = useState("Home");
@@ -23,6 +24,7 @@ function App() {
       <Habilitys
         onInView={(isInView) => handleInView("Habilidades", isInView)}
       />
+      <Contact onInView={(isInView) => handleInView("Contacto", isInView)} />
     </>
   );
 }

@@ -1,0 +1,36 @@
+.contact {
+  height: 90vh;
+  width: 100%;
+  background-color: var(--fondoOscuro);
+}
+
+.contact .title {
+  font-size: 1.5rem;
+  text-align: left;
+  border-bottom: 5px solid var(--background1);
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.contact .cta {
+  margin: 1rem;
+  font-size: 1.1rem;
+}
+
+.contact .logos {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+}
+
+.logos img {
+  width: 80px;
+  height: 80px;
+}
+
+.contact .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 1rem;
+}
