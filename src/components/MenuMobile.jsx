@@ -23,6 +23,7 @@ export default function MenuMobile({ componentActive }) {
     const newOpts = opts.map((item) => ({ ...item, isActive: false }));
     newOpts[index].isActive = true;
     setOpts(newOpts);
+    toggleOptions();
     scroller.scrollTo(name, scrollType);
   };
 
