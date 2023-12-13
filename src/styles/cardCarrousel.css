@@ -29,7 +29,7 @@
   border-radius: 20px;
 }
 
-.card-carousel::-webkit-scrollbar:vertical{
+.card-carousel::-webkit-scrollbar:vertical {
   display: none;
 }
 .card-carousel::-webkit-scrollbar-thumb {
@@ -37,7 +37,6 @@
   border-radius: 20px;
   border: 2px solid var(--primary);
 }
-
 
 .card {
   width: 250px;

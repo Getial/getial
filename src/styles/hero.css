@@ -147,6 +147,10 @@
     font-size: 1.8rem;
   }
 
+  .hero .description {
+    width: 90%;
+  }
+
   .hero button {
     width: 300px;
     height: 70px;

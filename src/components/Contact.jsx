@@ -48,55 +48,57 @@ export default function Contact({ onInView }) {
     };
   }, []);
   return (
-    <Element name="Contacto" className="contact" ref={contactRef}>
-      <h3 className="title">Contacto</h3>
-      <p className="cta">
-        Conéctate conmigo en <span>LinkedIn</span>, revisa mi código en{" "}
-        <span>GitHub</span> y envíame un <span>correo electrónico</span> para
-        discutir cómo puedo fortalecer tu equipo. ¡Listo para crear juntos!
-      </p>
-      <div className="logos">
-        <a
-          className={`icono ${
-            iconoSeleccionado === 1 ? "animacion-bounce" : ""
-          }`}
-          target="_blank"
-          href="https://www.linkedin.com/in/brayan-felipe-getial-5768b1213/"
-        >
-          <img src="./assets/logos/linkedin.png" alt="logo linkedin" />
-        </a>
-        <a
-          className={`icono ${
-            iconoSeleccionado === 2 ? "animacion-bounce" : ""
-          }`}
-          target="_blank"
-          href="https://github.com/Getial"
-        >
-          <img src="./assets/logos/github.png" alt="logo github" />
-        </a>
-        <a
-          className={`icono ${
-            iconoSeleccionado === 3 ? "animacion-bounce" : ""
-          }`}
-          target="_blank"
-          href="mailto:bfgetial@gmail.com"
-        >
-          <img src="./assets/logos/mail.png" alt="logo mail" />
-        </a>
-      </div>
-      <div className="info">
-        <h4>Informacion General</h4>
-        <div>
-          <p>Nombre:</p>
-          <p>Brayan Felipe Getial Ayala</p>
+    <Element name="Contacto" className="contact-container" ref={contactRef}>
+      <div className="contact">
+        <h3 className="title">Contacto</h3>
+        <p className="cta">
+          Conéctate conmigo en <span>LinkedIn</span>, revisa mi código en{" "}
+          <span>GitHub</span> y envíame un <span>correo electrónico</span> para
+          discutir cómo puedo fortalecer tu equipo. ¡Listo para crear juntos!
+        </p>
+        <div className="logos">
+          <a
+            className={`icono ${
+              iconoSeleccionado === 1 ? "animacion-bounce" : ""
+            }`}
+            target="_blank"
+            href="https://www.linkedin.com/in/brayan-felipe-getial-5768b1213/"
+          >
+            <img src="./assets/logos/linkedin.png" alt="logo linkedin" />
+          </a>
+          <a
+            className={`icono ${
+              iconoSeleccionado === 2 ? "animacion-bounce" : ""
+            }`}
+            target="_blank"
+            href="https://github.com/Getial"
+          >
+            <img src="./assets/logos/github.png" alt="logo github" />
+          </a>
+          <a
+            className={`icono ${
+              iconoSeleccionado === 3 ? "animacion-bounce" : ""
+            }`}
+            target="_blank"
+            href="mailto:bfgetial@gmail.com"
+          >
+            <img src="./assets/logos/mail.png" alt="logo mail" />
+          </a>
         </div>
-        <div>
-          <p>Edad:</p>
-          <p>24 años</p>
-        </div>
-        <div>
-          <p>Reside en:</p>
-          <p>Pasto-Nariño Colombia</p>
+        <div className="info">
+          <h4>Informacion General</h4>
+          <div>
+            <p>Nombre:</p>
+            <p>Brayan Felipe Getial Ayala</p>
+          </div>
+          <div>
+            <p>Edad:</p>
+            <p>24 años</p>
+          </div>
+          <div>
+            <p>Reside en:</p>
+            <p>Pasto-Nariño Colombia</p>
+          </div>
         </div>
       </div>
     </Element>
