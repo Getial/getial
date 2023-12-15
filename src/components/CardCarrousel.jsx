@@ -19,11 +19,18 @@ export default function CardCarrousel() {
     <div className="card-carousel">
       {/* <button onClick={prevCard}>&lt;</button> */}
       {habilitys.map((item, index) => (
-        <div key={index} className="card">
-          <img src={item.image} alt={item.title} />
-          <h2 className="titleCard">{item.title}</h2>
-          <p className="textCard">{item.description}</p>
+        <div className="box" key={index}>
+          <div className="card">
+            <img src={item.image} alt={item.title} />
+            <h2 className="titleCard">{item.title}</h2>
+            <p className="textCard">{item.description}</p>
+          </div>
         </div>
+        // <div key={index} className="card">
+        //   <img src={item.image} alt={item.title} />
+        //   <h2 className="titleCard">{item.title}</h2>
+        //   <p className="textCard">{item.description}</p>
+        // </div>
       ))}
 
       {/* <p className="dotsContainer">Hola mundo</p> */}

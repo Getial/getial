@@ -8,7 +8,15 @@
   border-radius: 20px;
   cursor: pointer;
   text-align: center;
+  font-size: 1rem;
 }
 .isActive {
   background-color: var(--background1);
+  font-weight: 600;
+}
+
+@media (min-width: 600px) {
+  .navOption {
+    font-size: 1.3rem;
+  }
 }

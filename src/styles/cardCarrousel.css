@@ -38,20 +38,58 @@
   border: 2px solid var(--primary);
 }
 
-.card {
-  width: 250px;
-  height: 20rem;
-  background-color: var(--acentoazul);
-  border: 3px solid var(--primary);
+.box {
+  position: relative;
+  width: 270px;
+  height: 22rem;
   border-radius: 0.7rem;
-  padding: 20px;
-  text-align: center;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
   margin: 5rem 2rem;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #00ffad
+  );
+  animation: rotate 4s linear infinite;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #00ccff
+  );
+  animation: rotate 4s linear infinite;
+  animation-delay: 2s;
+}
+
+.card {
+  position: absolute;
+  inset: 2px;
+  border-radius: 0.8rem;
+  background-color: var(--acentoazul);
+  z-index: 2;
+  text-align: center;
+  padding: 10px;
 }
 
 .card img {
   width: fit-content;
-  height: 90px;
+  height: 80px;
 }
 
 .card .titleCard {
@@ -69,9 +107,9 @@
 }
 
 @media (min-width: 850px) {
-  .card {
-    width: 300px;
-    height: 22rem;
+  .box {
+    width: 335px;
+    height: 23.5rem;
   }
 
   .card img {
@@ -89,20 +127,19 @@
 }
 
 @media (min-width: 950px) {
+  .box {
+    width: 350px;
+    height: 25rem;
+  }
   .card-carousel {
     max-width: 1200px;
-  }
-
-  .card {
-    width: 310px;
-    height: 22rem;
   }
 }
 
 @media (min-width: 1200px) {
-  .card {
-    width: 300px;
-    height: 25rem;
+  .box {
+    width: 340px;
+    height: 26rem;
   }
 
   .card img {
@@ -115,5 +152,14 @@
 
   .card .textCard {
     font-size: 1.3rem;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

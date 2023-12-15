@@ -38,6 +38,7 @@ header {
 
 .menuMobile {
   display: flex;
+  z-index: 3;
 }
 
 .menuDesktop {
