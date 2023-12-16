@@ -5,13 +5,15 @@ import CardCarrousel from "./CardCarrousel";
 
 export default function Habilitys({ onInView }) {
   const habilitysRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       // Acciones cuando el componente está en pantalla
       const rect =
         habilitysRef.current.childBindings.domNode.getBoundingClientRect();
-      const isInView = rect.top < 300 && rect.bottom >= 300;
+      const isInViewActive = rect.top < 300 && rect.bottom >= 300;
+      setIsInView(isInViewActive);
       onInView(isInView);
     };
 
@@ -25,7 +27,7 @@ export default function Habilitys({ onInView }) {
     <Element name="Habilidades" className="habilitys" ref={habilitysRef}>
       {/* <section> */}
       <h3 className="title">Habilidades y Conocimientos</h3>
-      <CardCarrousel />
+      <CardCarrousel isInView={isInView} />
       {/* </section> */}
     </Element>
   );

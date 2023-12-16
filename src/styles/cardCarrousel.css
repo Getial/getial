@@ -8,6 +8,7 @@
   margin: 1rem 0;
   margin-bottom: 10rem;
   background-color: var(--background1);
+  /* animation: scrollAnimation 2s infinite linear; */
 }
 
 .card-carousel::-webkit-scrollbar {
@@ -161,5 +162,23 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
