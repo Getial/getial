@@ -2,10 +2,11 @@
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  font-size: 16px;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #000;
+  box-sizing: border-box;
 
   --black: #080808;
   --blackpuro: #000;
@@ -30,4 +31,5 @@ body {
   align-items: center;
   /* max-width: 1300px; */
   margin: 0 auto;
+  box-sizing: border-box;
 }

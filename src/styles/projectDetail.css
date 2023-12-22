@@ -1,0 +1,22 @@
+.projectDetail {
+  width: 95vw;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.projectDetail .btn-back {
+  position: absolute;
+  top: 3rem;
+  left: 5rem;
+}
+
+.projectDetail h1 {
+  text-align: center;
+}
+
+.projectDetail h2 {
+  text-align: center;
+}

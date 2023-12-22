@@ -38,7 +38,6 @@ export default function CardCarrousel({ isInView }) {
           // Programar el reinicio de la animación
           isInView &&
             setTimeout(() => {
-              console.log("entro al timeout");
               requestAnimationFrame(animateScroll);
             }, 2000); // Esperar 1 segundo antes de reiniciar
         }

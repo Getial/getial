@@ -57,7 +57,8 @@
   color: var(--blackpuro);
 }
 
-.project .btns button {
+.project .btns button,
+.project .btns .link {
   background-color: var(--primary);
   display: flex;
   width: 120px;
@@ -67,6 +68,7 @@
   gap: 10px;
   flex-shrink: 0;
   color: var(--blackpuro);
+  font-size: 1rem;
   font-weight: 500;
   border: 0;
   border-radius: 10px;

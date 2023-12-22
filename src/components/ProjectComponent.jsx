@@ -1,8 +1,9 @@
 import React from "react";
+import { Outlet, Link } from "react-router-dom";
 import "../styles/projectComponent.css";
 
-export default function ProjectComponent({ project }) {
-  const { title, type, description, image, left, codeUrl } = project;
+export default function ProjectComponent({ project, left }) {
+  const { id, title, type, description, image, codeUrl } = project;
 
   const isLeft = left ? "left" : "";
 
@@ -20,7 +21,9 @@ export default function ProjectComponent({ project }) {
                 Ver Codigo
               </a>
             </button>
-            <button>Ver Proyecto</button>
+            <Link className="link" to={`/getial/detailProject/${id}`}>
+              Ver Proyecto
+            </Link>
           </div>
         </div>
         <img src={image} />
@@ -31,7 +34,9 @@ export default function ProjectComponent({ project }) {
             Ver Codigo
           </a>
         </button>
-        <button>Ver Proyecto</button>
+        <Link className="link" to={`/getial/detailProject/${id}`}>
+          Ver Proyecto
+        </Link>
       </div>
     </div>
   );

@@ -57,6 +57,7 @@
 }
 
 .hero .description {
+  background-color: var(--blackpuro50);
   font-size: 1.2rem;
   font-weight: 200;
   display: none;

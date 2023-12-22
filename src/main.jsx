@@ -1,10 +1,29 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './styles/index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorScreen from "./screens/ErrorScreen.jsx";
+import HomeScreen from "./screens/HomeScreen.jsx";
+import DetailProjectScreen, {
+  loader as projectLoader,
+} from "./screens/DetailProjectScreen.jsx";
+import "./styles/index.css";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const router = createBrowserRouter([
+  {
+    path: "/getial",
+    element: <HomeScreen />,
+    errorElement: <ErrorScreen />,
+  },
+  {
+    path: "/getial/detailProject/:projectId",
+    element: <DetailProjectScreen />,
+    loader: projectLoader,
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);

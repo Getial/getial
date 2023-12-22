@@ -14,7 +14,7 @@ export default function Habilitys({ onInView }) {
         habilitysRef.current.childBindings.domNode.getBoundingClientRect();
       const isInViewActive = rect.top < 300 && rect.bottom >= 300;
       setIsInView(isInViewActive);
-      onInView(isInView);
+      onInView(isInViewActive);
     };
 
     window.addEventListener("scroll", handleScroll);
