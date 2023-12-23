@@ -1,8 +1,8 @@
 import React from "react";
 import { Form, useNavigate, useLoaderData } from "react-router-dom";
+import { ArrowBack } from "@mui/icons-material";
 import { projects } from "../utils/projects";
 import "../styles/projectDetail.css";
-import ArrowBack from "@material-ui/icons/ArrowBack";
 
 export async function loader({ params }) {
   const project = projects.find(
@@ -20,9 +20,8 @@ export default function DetailProjectScreen() {
   return (
     <div className="projectDetail">
       <h1>{project.title}</h1>
-      {/* <button onClick={() => navigate("/getial/")}> */}
-      <ArrowBack className="btn-back" onClick={goBack} />
-      {/* </button> */}
+      {/* <button onClick={() => navigate("/getial/")}>⇦</button> */}
+      <ArrowBack className="btn-back" onClick={() => navigate("/getial/")} />
       <img src="../assets/1.jpeg" alt="" />
       <h2>Caracteristicas</h2>
       {project.characteristics.map((item, index) => (
