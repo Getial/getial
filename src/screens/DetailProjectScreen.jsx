@@ -49,6 +49,7 @@ export default function DetailProjectScreen() {
           </button>
         )}
       </div>
+      <p className="copy">{project.copy}</p>
       <h2>Caracteristicas</h2>
       {project.characteristics.map((item, index) => (
         <div key={index} className="characteristc">
