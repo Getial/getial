@@ -18,11 +18,11 @@ export default function ProjectComponent({ project, left }) {
           <div className="btns btnsDesktop">
             <button>
               <a href={codeUrl} target="_blank">
-                Ver Codigo
+                Ir al Codigo
               </a>
             </button>
             <Link className="link" to={`/getial/detailProject/${id}`}>
-              Ver Proyecto
+              Ver más
             </Link>
           </div>
         </div>
@@ -31,11 +31,11 @@ export default function ProjectComponent({ project, left }) {
       <div className="btns btnsMobile">
         <button>
           <a href={codeUrl} target="_blank">
-            Ver Codigo
+            Ir al Codigo
           </a>
         </button>
         <Link className="link" to={`/getial/detailProject/${id}`}>
-          Ver Proyecto
+          Ver más
         </Link>
       </div>
     </div>
