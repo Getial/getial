@@ -26,7 +26,7 @@ export default function ProjectComponent({ project, left }) {
             </Link>
           </div>
         </div>
-        <img src={image} />
+        <img src={image} alt={`image project ${title}`} />
       </div>
       <div className="btns btnsMobile">
         <button>

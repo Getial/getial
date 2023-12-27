@@ -23,6 +23,7 @@ export default function Habilitys({ onInView }) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <Element name="Habilidades" className="habilitys" ref={habilitysRef}>
       {/* <section> */}

@@ -8,7 +8,6 @@
   margin: 1rem 0;
   margin-bottom: 10rem;
   background-color: var(--background1);
-  /* animation: scrollAnimation 2s infinite linear; */
 }
 
 .card-carousel::-webkit-scrollbar {

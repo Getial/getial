@@ -47,7 +47,6 @@ export default function Hero({ onInView }) {
 
   return (
     <Element name="Home" className="hero" ref={heroRef}>
-      {/* <section className="hero"> */}
       <h1>Hola, soy Felipe Getial</h1>
       <p className={`subtitle ${isShowDescription}`}>
         Colombiano de 24 años, apasionado por el desarrollo{" "}
@@ -75,7 +74,6 @@ export default function Hero({ onInView }) {
         className="bgazul"
         style={{ left: `${position.x}px`, top: `${position.y}px` }}
       ></div>
-      {/* </section> */}
     </Element>
   );
 }

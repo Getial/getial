@@ -9,7 +9,6 @@ import Contact from "../components/Contact";
 function HomeScreen() {
   const [componentActive, setComponentActive] = useState("Home");
   const handleInView = (componentName, isInView) => {
-    // Aquí puedes realizar acciones específicas para cada componente en pantalla
     isInView && setComponentActive(componentName);
   };
 

@@ -6,15 +6,12 @@
   padding: 0.5rem;
   height: 99vh;
   width: 90%;
-  /* background-color: aqua; */
-  /* top: 5rem; */
 }
 
 .bgimage {
   position: absolute;
   background-image: url("./background.png");
   background-size: 50px 50px;
-  /* background-color: red; */
   width: 100vw;
   height: 100vh;
   z-index: -1;

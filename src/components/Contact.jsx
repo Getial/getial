@@ -47,6 +47,7 @@ export default function Contact({ onInView }) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <Element name="Contacto" className="contact-container" ref={contactRef}>
       <div className="contact">
