@@ -7,6 +7,7 @@ import DetailProjectScreen, {
   loader as projectLoader,
 } from "./screens/DetailProjectScreen.jsx";
 import "./styles/index.css";
+import { LangProvider } from "./context/LangContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <LangProvider>
+      <RouterProvider router={router} />
+    </LangProvider>
   </React.StrictMode>
 );

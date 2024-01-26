@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../styles/hero.css";
 import { Element } from "react-scroll";
+import { useLang } from "../context/LangContext";
 
 export default function Hero({ onInView }) {
   const [showDescription, setShowDescription] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const heroRef = useRef(null);
+  const { lang } = useLang();
 
   const isShowDescription = showDescription ? "active" : "";
   const textBtn = isShowDescription ? "Resumen" : "Mas sobre mi";

@@ -3,9 +3,12 @@ import { options } from "../utils/menuOptions";
 import NavOption from "./NavOption";
 import "../styles/header.css";
 import { scroller } from "react-scroll";
+import { useLang } from "../context/LangContext";
 
 export default function MenuDesktop({ componentActive }) {
+  const { lang, toggleLang } = useLang();
   const [opts, setOpts] = useState(options);
+  const [active, setActive] = useState(false);
   const scrollType = {
     duration: 500,
     delay: 50,
@@ -27,6 +30,11 @@ export default function MenuDesktop({ componentActive }) {
     setOpts(newOpts);
   };
 
+  const changeLanguage = () => {
+    setActive(!active);
+    toggleLang();
+  };
+
   useEffect(() => {
     if (opts) {
       let indice = opts.findIndex((objeto) => objeto.title === componentActive);
@@ -45,6 +53,9 @@ export default function MenuDesktop({ componentActive }) {
           setOption={selectOption}
         />
       ))}
+      <div onClick={changeLanguage} className="buttonLanguage">
+        <div className={`circleButtonLanguage ${active ? "active" : ""}`}></div>
+      </div>
     </header>
   );
 }

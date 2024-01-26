@@ -1,0 +1,34 @@
+{
+  "es": {
+    "contact": {
+      "title": "Contacto",
+      "cta": "Conéctate conmigo en LinkedIn, revisa mi código en GitHub y envíame un correo electrónico paradiscutir cómo puedo fortalecer tu equipo. ¡Listo para crear juntos!",
+      "info": {
+        "title": "Informacion General",
+        "labelName": "Nombre:",
+        "name": "Brayan Felipe Getial Ayala",
+        "labelAge": "Edad:",
+        "age": "24 años",
+        "labelResideIn": "Reside en",
+        "resideIn": "Pasto - Colombia"
+      }
+    },
+    "paragraph": "Este es un párrafo en español."
+  },
+  "en": {
+    "contact": {
+      "title": "Contact",
+      "cta": "Connect with me on LinkedIn, check out my code on GitHub, and email me to discuss how I can strengthen your team. Ready to create together!",
+      "info": {
+        "title": "General information",
+        "labelName": "Name:",
+        "name": "Brayan Felipe Getial Ayala",
+        "labelAge": "Age:",
+        "age": "24 years",
+        "labelResideIn": "Lives in",
+        "resideIn": "Pasto - Colombia"
+      }
+    },
+    "paragraph": "This is a paragraph in English."
+  }
+}

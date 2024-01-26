@@ -18,6 +18,9 @@
   --primary: #00ffed;
   --acentoazul: #091c62;
   --white: #f0eef6;
+  --shadow: #abc9;
+  --light: #fff9;
+  --background: #e0e5ec;
 }
 
 body {

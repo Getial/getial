@@ -1,11 +1,19 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Element } from "react-scroll";
 import "../styles/contact.css";
+import { useLang } from "../context/LangContext";
+import { getTexts } from "../utils/textos";
 
 export default function Contact({ onInView }) {
   const [iconoSeleccionado, setIconoSeleccionado] = useState(null);
+  const [texts, setTexts] = useState(getTexts);
   const contactRef = useRef(null);
+  const { lang } = useLang();
 
+  useEffect(() => {
+    const texts = getTexts(lang);
+    setTexts(texts);
+  }, [lang]);
   //useEffect para animar aleatoriamente un icono
   useEffect(() => {
     // Función para aplicar la animación a un icono aleatorio
@@ -51,12 +59,13 @@ export default function Contact({ onInView }) {
   return (
     <Element name="Contacto" className="contact-container" ref={contactRef}>
       <div className="contact">
-        <h3 className="title">Contacto</h3>
-        <p className="cta">
+        <h3 className="title">{texts.contact.title}</h3>
+        <p className="cta">{texts.contact.cta}</p>
+        {/* <p className="cta">
           Conéctate conmigo en <span>LinkedIn</span>, revisa mi código en{" "}
           <span>GitHub</span> y envíame un <span>correo electrónico</span> para
           discutir cómo puedo fortalecer tu equipo. ¡Listo para crear juntos!
-        </p>
+        </p> */}
         <div className="logos">
           <a
             className={`icono ${
@@ -87,18 +96,18 @@ export default function Contact({ onInView }) {
           </a>
         </div>
         <div className="info">
-          <h4>Informacion General</h4>
+          <h4>{texts.contact.info.title}</h4>
           <div>
-            <p>Nombre:</p>
-            <p>Brayan Felipe Getial Ayala</p>
+            <p>{texts.contact.info.labelName}</p>
+            <p>{texts.contact.info.name}</p>
           </div>
           <div>
-            <p>Edad:</p>
-            <p>24 años</p>
+            <p>{texts.contact.info.labelAge}</p>
+            <p>{texts.contact.info.age}</p>
           </div>
           <div>
-            <p>Reside en:</p>
-            <p>Pasto-Nariño Colombia</p>
+            <p>{texts.contact.info.labelResideIn}</p>
+            <p>{texts.contact.info.resideIn}</p>
           </div>
         </div>
       </div>
