@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { options } from "../utils/menuOptions";
 import NavOption from "./NavOption";
 import "../styles/header.css";
 import { scroller } from "react-scroll";
 import { useLang } from "../context/LangContext";
+import { getTexts } from "../utils/textos";
 
 export default function MenuDesktop({ componentActive }) {
-  const { lang, toggleLang } = useLang();
-  const [opts, setOpts] = useState(options);
+  const [opts, setOpts] = useState([]);
   const [active, setActive] = useState(false);
+  const { lang, toggleLang } = useLang();
+
+  // usseEffect para traer los textos dependiendo del idioma
+  useEffect(() => {
+    const texts = getTexts(lang);
+    setOpts(texts.header);
+  }, [lang]);
+
   const scrollType = {
     duration: 500,
     delay: 50,
@@ -17,7 +24,7 @@ export default function MenuDesktop({ componentActive }) {
   };
 
   const selectOption = (index) => {
-    const name = opts[index].title;
+    const name = opts[index].component;
     const newOpts = opts.map((item) => ({ ...item, isActive: false }));
     newOpts[index].isActive = true;
     setOpts(newOpts);
@@ -35,16 +42,19 @@ export default function MenuDesktop({ componentActive }) {
     toggleLang();
   };
 
+  //background para el componente que esta activo dependiendo del scroll y tambien cuando se cambia de idioma
   useEffect(() => {
-    if (opts) {
-      let indice = opts.findIndex((objeto) => objeto.title === componentActive);
+    if (opts.length > 0) {
+      let indice = opts.findIndex(
+        (objeto) => objeto.component === componentActive
+      );
       setTitleOption(indice);
     }
   }, [componentActive]);
 
   return (
     <header className="menuDesktop">
-      {opts.map((item, index) => (
+      {opts?.map((item, index) => (
         <NavOption
           key={index}
           pos={index}

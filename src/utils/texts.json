@@ -13,7 +13,35 @@
         "resideIn": "Pasto - Colombia"
       }
     },
-    "paragraph": "Este es un párrafo en español."
+    "header": [
+      {
+        "title": "Inicio",
+        "component": "Home",
+        "icon": "Home",
+        "isActive": true
+      },
+      {
+        "title": "Proyectos",
+        "component": "Proyectos",
+        "icon": "Home",
+        "isActive": false
+      },
+      {
+        "title": "Habilidades",
+        "component": "Habilidades",
+        "icon": "Home",
+        "isActive": false
+      },
+      {
+        "title": "Contacto",
+        "component": "Contacto",
+        "icon": "Home",
+        "isActive": false
+      }
+    ],
+    "hero": {
+      "title": ""
+    }
   },
   "en": {
     "contact": {
@@ -29,6 +57,34 @@
         "resideIn": "Pasto - Colombia"
       }
     },
-    "paragraph": "This is a paragraph in English."
+    "header": [
+      {
+        "title": "Home",
+        "component": "Home",
+        "icon": "Home",
+        "isActive": true
+      },
+      {
+        "title": "Projects",
+        "component": "Proyectos",
+        "icon": "Home",
+        "isActive": false
+      },
+      {
+        "title": "Habilitys",
+        "component": "Habilidades",
+        "icon": "Home",
+        "isActive": false
+      },
+      {
+        "title": "Contact",
+        "component": "Contacto",
+        "icon": "Home",
+        "isActive": false
+      }
+    ],
+    "hero": {
+      "title": ""
+    }
   }
 }

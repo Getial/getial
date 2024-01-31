@@ -5,11 +5,23 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import "../styles/header.css";
 import { options } from "../utils/menuOptions";
 import { scroller } from "react-scroll";
+import { useLang } from "../context/LangContext";
+import { getTexts } from "../utils/textos";
 
 export default function MenuMobile({ componentActive }) {
   const [isShowOptions, setIsShowOptions] = useState(false);
-  const [opts, setOpts] = useState(options);
+  const [opts, setOpts] = useState([]);
   const [title, setTitle] = useState("Home");
+  const [active, setActive] = useState(false);
+  const { lang, toggleLang } = useLang();
+  const showOptions = isShowOptions ? "active" : "";
+
+  // usseEffect para traer los textos dependiendo del idioma
+  useEffect(() => {
+    const texts = getTexts(lang);
+    setOpts(texts.header);
+  }, [lang]);
+
   const scrollType = {
     duration: 500,
     delay: 50,
@@ -18,7 +30,7 @@ export default function MenuMobile({ componentActive }) {
   };
 
   const selectOption = (index) => {
-    const name = opts[index].title;
+    const name = opts[index].component;
     setTitle(name);
     const newOpts = opts.map((item) => ({ ...item, isActive: false }));
     newOpts[index].isActive = true;
@@ -31,31 +43,43 @@ export default function MenuMobile({ componentActive }) {
     setIsShowOptions(!isShowOptions);
   };
 
-  const showOptions = isShowOptions ? "active" : "";
+  const changeLanguage = () => {
+    setActive(!active);
+    toggleLang();
+  };
 
+  const BtnLanguage = () => (
+    <div onClick={changeLanguage} className="buttonLanguage">
+      <div className={`circleButtonLanguage ${active ? "active" : ""}`}></div>
+    </div>
+  );
+
+  //titulo para el componente que esta activo dependiendo del scroll y tambien cuando se cambia de idioma
   useEffect(() => {
-    if (title) {
-      setTitle(componentActive);
+    if (opts.length > 0) {
+      let indice = opts.findIndex(
+        (objeto) => objeto.component === componentActive
+      );
+      setTitle(opts[indice].title);
     }
-  }, [componentActive]);
+  }, [componentActive, opts]);
 
   return (
     <header className="menuMobile">
       <NavOption title={title} isActive={true} />
+      <BtnLanguage />
       <MenuOutlinedIcon onClick={toggleOptions} />
       <div className={`listContainer ${showOptions}`}>
         <ul>
-          {options
-            // .filter((item) => item.isActive === false)
-            .map((item, index) => (
-              <NavOptionMobile
-                key={index}
-                pos={index}
-                title={item.title}
-                isActive={false}
-                setOption={selectOption}
-              />
-            ))}
+          {opts?.map((item, index) => (
+            <NavOptionMobile
+              key={index}
+              pos={index}
+              title={item.title}
+              isActive={false}
+              setOption={selectOption}
+            />
+          ))}
         </ul>
       </div>
     </header>

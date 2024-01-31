@@ -10,10 +10,12 @@ export default function Contact({ onInView }) {
   const contactRef = useRef(null);
   const { lang } = useLang();
 
+  // usseEffect para traer los textos dependiendo del idoma
   useEffect(() => {
     const texts = getTexts(lang);
     setTexts(texts);
   }, [lang]);
+
   //useEffect para animar aleatoriamente un icono
   useEffect(() => {
     // Función para aplicar la animación a un icono aleatorio
