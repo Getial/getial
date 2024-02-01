@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import "../styles/projectComponent.css";
+import { useLang } from "../context/LangContext";
+import { getTexts } from "../utils/textos";
 
 export default function ProjectComponent({ project, left }) {
   const { id, title, type, description, image, codeUrl } = project;
-
   const isLeft = left ? "left" : "";
+  const [texts, setTexts] = useState("");
+  const { lang } = useLang();
+
+  // usseEffect para traer los textos dependiendo del idioma
+  useEffect(() => {
+    const texts = getTexts(lang);
+    setTexts(texts.projectsComponent);
+  }, [lang]);
 
   return (
     <div className="project">
@@ -18,11 +27,11 @@ export default function ProjectComponent({ project, left }) {
           <div className="btns btnsDesktop">
             <button>
               <a href={codeUrl} target="_blank">
-                Ir al Codigo
+                {texts?.btn1}
               </a>
             </button>
             <Link className="link" to={`/getial/detailProject/${id}`}>
-              Ver más
+              {texts?.btn2}
             </Link>
           </div>
         </div>
@@ -31,11 +40,11 @@ export default function ProjectComponent({ project, left }) {
       <div className="btns btnsMobile">
         <button>
           <a href={codeUrl} target="_blank">
-            Ir al Codigo
+            {texts?.btn1}
           </a>
         </button>
         <Link className="link" to={`/getial/detailProject/${id}`}>
-          Ver más
+          {texts?.btn2}
         </Link>
       </div>
     </div>

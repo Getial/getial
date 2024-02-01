@@ -1,11 +1,23 @@
 import React, { useRef, useState, useEffect } from "react";
 import ProjectComponent from "./ProjectComponent";
 import "../styles/projects.css";
-import { projects } from "../utils/projects";
+// import { projects } from "../utils/projects";
 import { Element } from "react-scroll";
+import { useLang } from "../context/LangContext";
+import { getTexts } from "../utils/textos";
 
 export default function Projects({ onInView }) {
+  const [projects, setProjects] = useState([]);
+  const [texts, setTexts] = useState(null);
   const projectsRef = useRef(null);
+  const { lang } = useLang();
+
+  // usseEffect para traer los textos dependiendo del idioma
+  useEffect(() => {
+    const texts = getTexts(lang);
+    setProjects(texts.projects);
+    setTexts(texts.projectsComponent);
+  }, [lang]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +41,7 @@ export default function Projects({ onInView }) {
       href="projectsRef"
       ref={projectsRef}
     >
-      <h3 className="title">Proyectos</h3>
+      <h3 className="title">{texts?.title}</h3>
       {projects.map((project, index) => (
         <ProjectComponent
           key={index}
