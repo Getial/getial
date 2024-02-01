@@ -2,15 +2,22 @@ import React, { useState, useEffect, useRef } from "react";
 import "../styles/hero.css";
 import { Element } from "react-scroll";
 import { useLang } from "../context/LangContext";
+import { getTexts } from "../utils/textos";
 
 export default function Hero({ onInView }) {
   const [showDescription, setShowDescription] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [texts, setTexts] = useState(getTexts);
   const heroRef = useRef(null);
   const { lang } = useLang();
-
   const isShowDescription = showDescription ? "active" : "";
-  const textBtn = isShowDescription ? "Resumen" : "Mas sobre mi";
+  const textBtn = isShowDescription ? texts.txtBtn2 : texts.txtBtn1;
+
+  // usseEffect para traer los textos dependiendo del idoma
+  useEffect(() => {
+    const texts = getTexts(lang);
+    setTexts(texts.hero);
+  }, [lang]);
 
   // useEffect para la animacion del fondo
   useEffect(() => {
@@ -49,24 +56,21 @@ export default function Hero({ onInView }) {
 
   return (
     <Element name="Home" className="hero" ref={heroRef}>
-      <h1>Hola, soy Felipe Getial</h1>
+      <h1>{texts.title}</h1>
       <p className={`subtitle ${isShowDescription}`}>
-        Colombiano de 24 años, apasionado por el desarrollo{" "}
-        <span>Fullstack</span> con mayor fluides en el area{" "}
+        {texts.subtitle1}
+        <span>Fullstack</span>
+        {texts.subtitle2}
         <span>Frontend</span>
       </p>
       <p className={`description ${isShowDescription}`}>
-        Como tecnólogo en Mecatrónica, empecé con programación de
-        microcontroladores y PLC para proyectos de Mecatrónica. Mi interés se
-        inclina hacia el desarrollo web frontend, donde he trabajado con
-        tecnologías como{" "}
+        {texts.description1}
         <span>
-          HTML, CSS, Javascript, React, React Native, VueJS y Bootstrap.
+          HTML, CSS, Javascript, React, React Native, VueJS & Bootstrap.
         </span>{" "}
-        Además, he ampliado mis habilidades al backend con{" "}
-        <span>Python (Django) y Node.js (Express) </span> para dar mayor
-        funcionalidad a mis proyectos. Mi enfoque se centra en convertir líneas
-        de código en resultados visuales impactantes.
+        {texts.description2}
+        <span>Python (Django) & Node.js (Express) </span>
+        {texts.description3}
       </p>
       <button onClick={() => setShowDescription(!showDescription)}>
         {textBtn}

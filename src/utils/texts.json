@@ -40,7 +40,14 @@
       }
     ],
     "hero": {
-      "title": ""
+      "title": "Hola, soy Felipe Getial",
+      "subtitle1": "Colombiano de 24 años, apasionado por el desarrollo ",
+      "subtitle2": " con mayor fluides en el area ",
+      "description1": "Como tecnólogo en Mecatrónica, empecé con programación de microcontroladores y PLC para proyectos de Mecatrónica. Mi interés se inclina hacia el desarrollo web frontend, donde he trabajado con tecnologías como ",
+      "description2": "Además, he ampliado mis habilidades al backend con ",
+      "description3": "para dar mayor funcionalidad a mis proyectos. Mi enfoque se centra en convertir líneas de código en resultados visuales impactantes.",
+      "txtBtn1": "Mas sobre mi",
+      "txtBtn2": "Resumen"
     }
   },
   "en": {
@@ -84,7 +91,14 @@
       }
     ],
     "hero": {
-      "title": ""
+      "title": "Hi, I'm Felipe Getial",
+      "subtitle1": "24 year old Colombian, passionate about ",
+      "subtitle2": " development with greater fluidity in the ",
+      "description1": "As a Mechatronics technologist, I started programming microcontrollers and PLCs for Mechatronics projects. My interest leans towards frontend web development, where I have worked with technologies such as ",
+      "description2": "Additionally, I have expanded my skills to the backend with ",
+      "description3": "to give greater functionality to my projects. My focus is on turning lines of code into stunning visual results.",
+      "txtBtn1": "More about me",
+      "txtBtn2": "Resume"
     }
   }
 }
