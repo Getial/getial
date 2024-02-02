@@ -152,6 +152,53 @@
         ],
         "copy": "Este reproductor de música es más que una simple interfaz; es una expresión de mi dedicación para fusionar diseño y funcionalidad de manera armoniosa. Experimenta la sinfonía visual y auditiva visitando mi proyecto y descubre cómo mi enfoque creativo puede transformar la manera en que interactuamos con la música en línea."
       }
+    ],
+    "habilitys": [
+      {
+        "title": "Javascript",
+        "image": "./assets/logos/js.png",
+        "description": "Es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos,​ basado en prototipos, imperativo, débilmente tipado y dinámico."
+      },
+      {
+        "title": "React",
+        "image": "./assets/logos/react.png",
+        "description": "Es una librería Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página."
+      },
+      {
+        "title": "React Native",
+        "image": "./assets/logos/react.png",
+        "description": "Es un framework de código abierto. Se utiliza para desarrollar aplicaciones multiplataform al permitir que los desarrolladores usen React con las características nativas de estas plataformas.​"
+      },
+      {
+        "title": "Python",
+        "image": "./assets/logos/python.png",
+        "description": "Es un lenguaje de alto nivel de programación interpretado cuya filosofía hace hincapié en la legibilidad de su código, se utiliza para desarrollar aplicaciones de todo tipo​"
+      },
+      {
+        "title": "Django",
+        "image": "./assets/logos/django.png",
+        "description": "Es un framework de desarrollo web de código abierto, escrito en Python, que respeta el patrón de diseño conocido como modelo–vista–controlador."
+      },
+      {
+        "title": "HTML",
+        "image": "./assets/logos/html.png",
+        "description": "Siglas en inglés de HyperText Markup Language, hace referencia al lenguaje de marcado para la elaboración de páginas web."
+      },
+      {
+        "title": "CSS",
+        "image": "./assets/logos/css.png",
+        "description": "En español «Hojas de estilo en cascada», es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado."
+      },
+      {
+        "title": "Bootstrap",
+        "image": "./assets/logos/bootstrap.png",
+        "description": "Bootstrap es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web."
+      },
+      {
+        "title": "NodeJS",
+        "image": "./assets/logos/node.png",
+        "description": "Es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor basado en el lenguaje de programación JavaScript"
+      }
     ]
   },
   "en": {
@@ -306,6 +353,53 @@
           }
         ],
         "copy": "Este reproductor de música es más que una simple interfaz; es una expresión de mi dedicación para fusionar diseño y funcionalidad de manera armoniosa. Experimenta la sinfonía visual y auditiva visitando mi proyecto y descubre cómo mi enfoque creativo puede transformar la manera en que interactuamos con la música en línea."
+      }
+    ],
+    "habilitys": [
+      {
+        "title": "Javascript",
+        "image": "./assets/logos/js.png",
+        "description": "It is an interpreted programming language, a dialect of the ECMAScript standard. It is defined as object-oriented, prototype-based, imperative, weakly typed and dynamic."
+      },
+      {
+        "title": "React",
+        "image": "./assets/logos/react.png",
+        "description": "It is an open source Javascript library designed to create user interfaces to facilitate the development of single page applications."
+      },
+      {
+        "title": "React Native",
+        "image": "./assets/logos/react.png",
+        "description": "It is an open source framework. It is used to develop cross-platform applications by allowing developers to use React with the native features of these platforms."
+      },
+      {
+        "title": "Python",
+        "image": "./assets/logos/python.png",
+        "description": "It is a high-level interpreted programming language whose philosophy emphasizes the readability of its code, it is used to develop applications of all types."
+      },
+      {
+        "title": "Django",
+        "image": "./assets/logos/django.png",
+        "description": "It is an open source web development framework, written in Python, that respects the design pattern known as model-view-controller."
+      },
+      {
+        "title": "HTML",
+        "image": "./assets/logos/html.png",
+        "description": "Acronym for HyperText Markup Language, it refers to the markup language for creating web pages."
+      },
+      {
+        "title": "CSS",
+        "image": "./assets/logos/css.png",
+        "description": "It is a graphic design language for defining and creating the presentation of a structured document written in a markup language."
+      },
+      {
+        "title": "Bootstrap",
+        "image": "./assets/logos/bootstrap.png",
+        "description": "Bootstrap is a cross-platform library or open source toolset for site and web application design."
+      },
+      {
+        "title": "NodeJS",
+        "image": "./assets/logos/node.png",
+        "description": "It is an open source, cross-platform, server-layer runtime environment based on the JavaScript programming language."
       }
     ]
   }

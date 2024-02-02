@@ -2,10 +2,15 @@ import React, { useState, useRef, useEffect } from "react";
 import "../styles/habilitys.css";
 import { Element } from "react-scroll";
 import CardCarrousel from "./CardCarrousel";
+import { useLang } from "../context/LangContext";
 
 export default function Habilitys({ onInView }) {
   const habilitysRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
+  const { lang } = useLang();
+
+  const title =
+    lang === "es" ? "Habilidades y Conocimientos" : "Skills and Knowledge";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +32,7 @@ export default function Habilitys({ onInView }) {
   return (
     <Element name="Habilidades" className="habilitys" ref={habilitysRef}>
       {/* <section> */}
-      <h3 className="title">Habilidades y Conocimientos</h3>
+      <h3 className="title">{title}</h3>
       <CardCarrousel isInView={isInView} />
       {/* </section> */}
     </Element>

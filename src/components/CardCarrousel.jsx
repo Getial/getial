@@ -1,9 +1,18 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "../styles/cardCarrousel.css";
-import { habilitys } from "../utils/habilitys";
+import { useLang } from "../context/LangContext";
+import { getTexts } from "../utils/textos";
 
 export default function CardCarrousel({ isInView }) {
   const containerRef = useRef(null);
+  const [habilitys, setHabilitys] = useState([]);
+  const { lang } = useLang();
+
+  // usseEffect para traer los textos dependiendo del idioma
+  useEffect(() => {
+    const texts = getTexts(lang);
+    setHabilitys(texts.habilitys);
+  }, [lang]);
 
   const handleScrollAnimation = () => {
     const container = containerRef.current;
