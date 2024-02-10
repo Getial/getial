@@ -66,7 +66,7 @@
         "backUrl": "https://github.com/Getial/back-service-order-manager",
         "characteristics": [
           {
-            "title": "Digitalización de Órdenes de Servicio:",
+            "title": "Digitalización de Órdenes de Servicio",
             "description": "Abandona los formularios en papel. Esta aplicación permite una transición sin esfuerzos a la digitalización, brindando un seguimiento detallado y accesible de cada orden de trabajo."
           },
           {
@@ -199,7 +199,13 @@
         "image": "./assets/logos/node.png",
         "description": "Es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor basado en el lenguaje de programación JavaScript"
       }
-    ]
+    ],
+    "detailProject": {
+      "btnShowFrontend": "Ver Codigo Frontend",
+      "btnShowbackend": "Ver Codigo Backend",
+      "btnTryDemo": "Probar Demo",
+      "characteristics": "Caracteristicas"
+    }
   },
   "en": {
     "contact": {
@@ -268,27 +274,27 @@
         "backUrl": "https://github.com/Getial/back-service-order-manager",
         "characteristics": [
           {
-            "title": "Digitalización de Órdenes de Servicio:",
-            "description": "Abandona los formularios en papel. Esta aplicación permite una transición sin esfuerzos a la digitalización, brindando un seguimiento detallado y accesible de cada orden de trabajo."
+            "title": "Digitization of Service Orders",
+            "description": "Ditch paper forms. This application enables an effortless transition to digitalization, providing detailed and accessible tracking of each work order."
           },
           {
-            "title": "Interfaz Intuitiva",
-            "description": "Diseñada con React Native, la interfaz ofrece una experiencia de usuario intuitiva y ágil, facilitando la navegación y la gestión de las órdenes de servicio."
+            "title": "Intuitive Interface",
+            "description": "Designed with React Native, the interface offers an intuitive and agile user experience, making it easy to navigate and manage service orders."
           },
           {
-            "title": "Backend Robusto con Django",
-            "description": "El corazón de la aplicación reside en un backend sólido desarrollado con Django, garantizando un manejo eficiente de los datos y una integración perfecta entre el frontend y el backend."
+            "title": "Robust Backend with Django",
+            "description": "The heart of the application lies in a robust backend developed with Django, ensuring efficient data handling and seamless integration between frontend and backend."
           },
           {
-            "title": "Base de Datos en PostgreSQL",
-            "description": "Utilizando PostgreSQL, hemos creado un sistema de almacenamiento confiable y eficiente para respaldar la gestión de grandes volúmenes de datos relacionados con las órdenes de trabajo."
+            "title": "Database in PostgreSQL",
+            "description": "Using PostgreSQL, we have created a reliable and efficient storage system to support the management of large volumes of data related to work orders."
           },
           {
-            "title": "Despliegue en AWS",
-            "description": "La aplicación se encuentra desplegada de manera segura y escalable en Amazon Web Services (AWS), asegurando un rendimiento óptimo y una disponibilidad constante."
+            "title": "Deployment on AWS",
+            "description": "The application is deployed securely and scalably on Amazon Web Services (AWS), ensuring optimal performance and constant availability."
           }
         ],
-        "copy": "Esta aplicación no solo representa mi experiencia en desarrollo móvil con React Native, sino también mi habilidad para construir soluciones integrales, desde la interfaz de usuario hasta el backend y la infraestructura en la nube. ¡Explora cómo esta aplicación redefine la eficiencia en la gestión de órdenes de trabajo y experimenta la sinergia de un enfoque Fullstack en desarrollo web!"
+        "copy": "This app not only represents my experience in mobile development with React Native, but also my ability to build end-to-end solutions, from UI to backend to cloud infrastructure. Explore how this app redefines efficiency in work order management and experience the synergy of a Fullstack approach to web development!"
       },
       {
         "id": 2,
@@ -300,27 +306,27 @@
         "demoUrl": "https://getial.github.io/curso-frontend-developer-practico-javascript/",
         "characteristics": [
           {
-            "title": "Interfaz Responsiva",
-            "description": "Garantizando una experiencia fluida en todos los dispositivos, desde computadoras de escritorio hasta smartphones."
+            "title": "Responsive Interface",
+            "description": "Ensuring a seamless experience on all devices, from desktops to smartphones."
           },
           {
-            "title": "Navegación Intuitiva",
-            "description": "Diseñé una interfaz de usuario que permite a los usuarios explorar fácilmente los productos y realizar compras sin esfuerzo."
+            "title": "Intuitive Navigation",
+            "description": "I designed a user interface that allows users to easily explore products and make purchases effortlessly."
           },
           {
-            "title": "Optimización de Rendimiento",
-            "description": "Utilizando React, logré una carga rápida de páginas, asegurando que los clientes no pierdan el interés durante su experiencia de compra."
+            "title": "Performance Optimization",
+            "description": "Using React, I achieved fast page loading, ensuring that customers do not lose interest during their shopping experience."
           },
           {
-            "title": "Integración de Componentes Reutilizables",
-            "description": "Implementé componentes modulares para facilitar el mantenimiento y la escalabilidad del proyecto, una muestra de mi enfoque en la eficiencia del desarrollo."
+            "title": "Integration of Reusable Components",
+            "description": "I implemented modular components to facilitate maintenance and scalability of the project, a sign of my focus on development efficiency."
           },
           {
-            "title": "Estilo y Estética",
-            "description": "La atención al detalle se refleja en el diseño limpio y atractivo que realza la identidad visual de la marca, demostrando mis habilidades en diseño UI/UX."
+            "title": "Style and Aesthetics",
+            "description": "The attention to detail is reflected in the clean and attractive design that enhances the brand's visual identity, demonstrating my skills in UI/UX design."
           }
         ],
-        "copy": "Este proyecto no solo es una demostración de mis habilidades técnicas, sino también de mi enfoque en crear soluciones que no solo satisfacen las necesidades del usuario, sino que también superan sus expectativas. ¡Explora la tienda en línea y descubre cómo mi habilidad como Frontend Developer puede llevar la experiencia de compra en línea al siguiente nivel!"
+        "copy": "This project is not only a demonstration of my technical skills, but also my focus on creating solutions that not only meet the user's needs, but also exceed their expectations. Explore the online store and discover how my skill as a Frontend Developer can take the online shopping experience to the next level!"
       },
       {
         "id": 3,
@@ -332,27 +338,27 @@
         "demoUrl": "https://getial.github.io/Music-Player/",
         "characteristics": [
           {
-            "title": "Interfaz Minimalista",
-            "description": "Un diseño limpio y minimalista que pone el enfoque en la música, destacando mi capacidad para crear interfaces atractivas y funcionales."
+            "title": "Minimalist interface",
+            "description": "A clean and minimalist design that puts the focus on the music, highlighting my ability to create attractive and functional interfaces."
           },
           {
-            "title": "Controles Intuitivos",
-            "description": "Botones de reproducción, pausa y avance que ofrecen una experiencia de usuario fluida y fácil de entender, evidenciando mi atención a la usabilidad."
+            "title": "Intuitive Controls",
+            "description": "Play, pause and forward buttons offer a fluid and easy-to-understand user experience, evidencing my attention to usability."
           },
           {
-            "title": "Adaptabilidad Responsiva",
-            "description": "Una interfaz adaptable que garantiza una experiencia óptima tanto en pantallas grandes como en dispositivos móviles."
+            "title": "Responsive Adaptability",
+            "description": "A responsive interface that guarantees an optimal experience on both large screens and mobile devices."
           },
           {
-            "title": "Animaciones Sutiles",
-            "description": "Toques de animación que realzan la experiencia del usuario sin comprometer el rendimiento, demostrando mi habilidad para equilibrar estilo y eficiencia."
+            "title": "Subtle Animations",
+            "description": "Animation touches that enhance the user experience without compromising performance, demonstrating my ability to balance style and efficiency."
           },
           {
-            "title": "Compatibilidad Multiplataforma",
-            "description": "Probado para funcionar sin problemas en varios navegadores, asegurando que la música nunca se detenga independientemente del entorno del usuario."
+            "title": "Cross-platform Compatibility",
+            "description": "Tested to work seamlessly across multiple browsers, ensuring music never stops regardless of the user's environment."
           }
         ],
-        "copy": "Este reproductor de música es más que una simple interfaz; es una expresión de mi dedicación para fusionar diseño y funcionalidad de manera armoniosa. Experimenta la sinfonía visual y auditiva visitando mi proyecto y descubre cómo mi enfoque creativo puede transformar la manera en que interactuamos con la música en línea."
+        "copy": "This music player is more than just an interface; It is an expression of my dedication to merging design and functionality harmoniously. Experience the visual and auditory symphony by visiting my project and discover how my creative approach can transform the way we interact with music online."
       }
     ],
     "habilitys": [
@@ -401,6 +407,12 @@
         "image": "./assets/logos/node.png",
         "description": "It is an open source, cross-platform, server-layer runtime environment based on the JavaScript programming language."
       }
-    ]
+    ],
+    "detailProject": {
+      "btnShowFrontend": "See Frontend Code",
+      "btnShowbackend": "See Backend Code",
+      "btnTryDemo": "Try Demo",
+      "characteristics": "Characteristics"
+    }
   }
 }
