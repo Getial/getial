@@ -27,9 +27,11 @@
   font-size: 1.3rem;
 }
 
-.contact .cta span {
+.contact .cta a {
   font-size: 1.3rem;
   font-weight: bold;
+  text-decoration: none;
+  color: var(--primary);
 }
 
 .contact .logos {
@@ -98,7 +100,7 @@
     margin-right: 3rem;
     margin-top: 3rem;
   }
-  .contact .cta span {
+  .contact .cta a {
     font-size: 1.7rem;
   }
   .contact .logos {
@@ -144,7 +146,7 @@
     font-size: 2rem;
     margin-top: 3rem;
   }
-  .contact .cta span {
+  .contact .cta a {
     font-size: 2rem;
   }
   .contact .logos {

@@ -62,12 +62,33 @@ export default function Contact({ onInView }) {
     <Element name="Contacto" className="contact-container" ref={contactRef}>
       <div className="contact">
         <h3 className="title">{texts.contact.title}</h3>
-        <p className="cta">{texts.contact.cta}</p>
-        {/* <p className="cta">
-          Conéctate conmigo en <span>LinkedIn</span>, revisa mi código en{" "}
-          <span>GitHub</span> y envíame un <span>correo electrónico</span> para
-          discutir cómo puedo fortalecer tu equipo. ¡Listo para crear juntos!
-        </p> */}
+        <p className="cta">
+          {texts.contact.cta[0]}
+          <a
+            href="http://www.linkedin.com/in/brayan-felipe-getial-5768b1213/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Linkedin
+          </a>
+          {texts.contact.cta[1]}
+          <a
+            href="https://github.com/Getial"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github
+          </a>
+          {texts.contact.cta[2]}
+          <a
+            href="mailto:bfgetial@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {texts.contact.cta[3]}
+          </a>
+          {texts.contact.cta[4]}
+        </p>
         <div className="logos">
           <a
             className={`icono ${
