@@ -3,7 +3,6 @@ import NavOption from "./NavOption";
 import NavOptionMobile from "./NavOptionMobile";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import "../styles/header.css";
-import { options } from "../utils/menuOptions";
 import { scroller } from "react-scroll";
 import { useLang } from "../context/LangContext";
 import { getTexts } from "../utils/textos";
