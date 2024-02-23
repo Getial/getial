@@ -167,6 +167,16 @@
         "description": "Es un framework de desarrollo web de código abierto, escrito en Python, que respeta el patrón de diseño conocido como modelo–vista–controlador."
       },
       {
+        "title": "Git",
+        "image": "./assets/logos/git.png",
+        "description": "Git es un sistema de control de versiones distribuido, ampliamente usado para rastrear cambios en el código fuente durante el desarrollo."
+      },
+      {
+        "title": "GitHub",
+        "image": "./assets/logos/github.png",
+        "description": "GitHub es una plataforma en línea que facilita alojar y colaborar en proyectos de software utilizando Git como sistema de control de versiones."
+      },
+      {
         "title": "HTML",
         "image": "./assets/logos/html.png",
         "description": "Siglas en inglés de HyperText Markup Language, hace referencia al lenguaje de marcado para la elaboración de páginas web."
@@ -379,6 +389,16 @@
         "title": "Django",
         "image": "./assets/logos/django.png",
         "description": "It is an open source web development framework, written in Python, that respects the design pattern known as model-view-controller."
+      },
+      {
+        "title": "Git",
+        "image": "./assets/logos/git.png",
+        "description": "Git is a distributed version control system, widely used to track changes to source code during development."
+      },
+      {
+        "title": "GitHub",
+        "image": "./assets/logos/github.png",
+        "description": "GitHub is an online platform that makes it easy to host and collaborate on software projects using Git as a version control system."
       },
       {
         "title": "HTML",

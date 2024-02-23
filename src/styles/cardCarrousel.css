@@ -3,7 +3,7 @@
   height: 90vh;
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   overflow: scroll;
   margin: 1rem 0;
   margin-bottom: 10rem;

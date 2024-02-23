@@ -42,7 +42,7 @@ header {
   padding: 0;
 }
 
-.active {
+.listContainer.active {
   display: flex;
   max-height: 300px;
 }
